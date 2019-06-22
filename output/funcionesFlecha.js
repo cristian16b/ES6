@@ -69,7 +69,10 @@ function duplicarVector(x) {
 //TENER EN CUENTA LOS SIGUIENTE
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array
 
-// console.log(duplicarVector2(numeros));
+numeros.forEach((numero,indice,array) => {
+    console.log(numero,indice,array);
+});
+
 
 //REPASAR FUNCIONES DE ARRAYS CON LA ES6, PORQUE ES MUY NECESARIO AGARRARLE LA MANO
 
