@@ -105,6 +105,21 @@ console.log('Recorriendo el vector');
 for(let x in numeros) {
     console.log(`pos ${x} valor ${numeros[x]}`);
 }
-
+console.log(`copiar un vector forma facil con slice ${c.slice()}`);
+console.log('uso del .from()');
+let vectFrom = Array.from([0,1,3], x => x * 2);
+console.log(vectFrom);
+function isBelowThreshold(currentValue) {
+    return currentValue < 40;
+}
+var array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.every(isBelowThreshold));
+var array = [1, 2, 3, 4, 5];
+var even = function(element) {
+  // checks whether an element is even
+  return element % 2 === 0;
+};
+console.log(array.some(even));
+console.log(array.some(isBelowThreshold));
 
 
