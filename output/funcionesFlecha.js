@@ -89,3 +89,11 @@ var pos = numeros.indexOf('atraz'); // ref posicion desde donde, cantidad a elim
 
 numeros.splice(pos, 3, 0, null, null);
 console.log(numeros);
+console.log("subvector ".concat(numeros.slice(1, numeros.length)));
+console.log("join devuelve ".concat(numeros.join('/')));
+var va = [0, 1],
+    vb = [3];
+var c = va.concat(vb);
+console.log("concat de dos vectores ".concat(c));
+console.log(c);
+console.log(c.toString());

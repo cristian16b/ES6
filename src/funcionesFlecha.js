@@ -94,6 +94,13 @@ let pos = numeros.indexOf('atraz');
 // ref posicion desde donde, cantidad a eliminar, elementos a insertar ...
 numeros.splice(pos,3,0,null,null);
 console.log(numeros);
+console.log(`subvector ${numeros.slice(1,numeros.length)}`);
+console.log(`join devuelve ${numeros.join('/')}`);
+const va = [0,1],vb = [3];
+let c = va.concat(vb);
+console.log(`concat de dos vectores ${c}`);
+console.log(c);
+console.log(c.toString());
 
 
 
