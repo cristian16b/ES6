@@ -101,6 +101,10 @@ let c = va.concat(vb);
 console.log(`concat de dos vectores ${c}`);
 console.log(c);
 console.log(c.toString());
+console.log('Recorriendo el vector');
+for(let x in numeros) {
+    console.log(`pos ${x} valor ${numeros[x]}`);
+}
 
 
 

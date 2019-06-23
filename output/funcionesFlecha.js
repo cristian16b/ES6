@@ -97,3 +97,8 @@ var c = va.concat(vb);
 console.log("concat de dos vectores ".concat(c));
 console.log(c);
 console.log(c.toString());
+console.log('Recorriendo el vector');
+
+for (var x in numeros) {
+  console.log("pos ".concat(x, " valor ").concat(numeros[x]));
+}
