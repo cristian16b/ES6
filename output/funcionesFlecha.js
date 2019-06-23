@@ -41,7 +41,7 @@ var numero_mayor = function numero_mayor(x, y) {
 // console.log(numero_mayor(c,a));
 
 
-var numeros = [2, 3, 5, 6];
+var numeros = [20, 3, 5, 6];
 
 function duplicarVector(x) {
   var duplicar = x.map(function (numero) {
@@ -69,21 +69,23 @@ numeros.forEach(function (numero, indice, array) {
 }); //REPASAR FUNCIONES DE ARRAYS CON LA ES6, PORQUE ES MUY NECESARIO AGARRARLE LA MANO
 
 numeros.push(21);
-console.log("push ".concat(numeros));
+console.log("push inserto final ".concat(numeros));
 numeros.pop();
-console.log("pop ".concat(numeros));
+console.log("pop elimino final ".concat(numeros));
 numeros.shift();
 console.log("shift elimino al inicio ".concat(numeros));
 numeros.unshift([-1, 0]);
 console.log("unshift inserto inicio ".concat(numeros));
-console.log("posicion del 5 es ".concat(numeros.indexOf(5)));
-console.log("pop ".concat(numeros.indexOf(-2))); //retorna -1 porque no existe
+console.log("index of 5 es ".concat(numeros.indexOf(5)));
+console.log("index of -2 ".concat(numeros.indexOf(-2))); //retorna -1 porque no existe
 
 numeros.splice(0, 1);
 console.log("splice para eliminar ".concat(numeros));
 numeros.splice(1, 0, 'a', 'b', 'c');
-console.log("splice para insertar ".concat(numeros));
+console.log("splice para insertar c/ pos negativa ".concat(numeros));
 numeros.splice(-1, 0, 'atraz', 'oh', 'zzzz');
-console.log("splice para insertar ".concat(numeros));
-numeros.splice(1, 2, -100, 0.5);
 console.log("splice eliminar insertar ".concat(numeros));
+var pos = numeros.indexOf('atraz'); // ref posicion desde donde, cantidad a eliminar, elementos a insertar ...
+
+numeros.splice(pos, 3, 0, null, null);
+console.log(numeros);

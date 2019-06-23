@@ -45,7 +45,7 @@ const numero_mayor = (x,y) => {
 // console.log(numero_mayor(a,b));
 // console.log(numero_mayor(c,a));
 
-const numeros = [2,3,5,6];
+const numeros = [20,3,5,6];
 
 function duplicarVector(x) {
     const duplicar = x.map(numero => {
@@ -75,23 +75,25 @@ numeros.forEach((numero,indice,array) => {
 
 //REPASAR FUNCIONES DE ARRAYS CON LA ES6, PORQUE ES MUY NECESARIO AGARRARLE LA MANO
 numeros.push(21);
-console.log( `push ${numeros}`);
+console.log( `push inserto final ${numeros}`);
 numeros.pop();
-console.log(`pop ${numeros}`);
+console.log(`pop elimino final ${numeros}`);
 numeros.shift();
 console.log(`shift elimino al inicio ${numeros}`);
 numeros.unshift([-1,0]);
 console.log(`unshift inserto inicio ${numeros}`);
-console.log(`posicion del 5 es ${numeros.indexOf(5)}`);
-console.log(`pop ${numeros.indexOf(-2)}`);//retorna -1 porque no existe
+console.log(`index of 5 es ${numeros.indexOf(5)}`);
+console.log(`index of -2 ${numeros.indexOf(-2)}`);//retorna -1 porque no existe
 numeros.splice(0,1);
 console.log(`splice para eliminar ${numeros}`);
 numeros.splice(1,0,'a','b','c');
-console.log(`splice para insertar ${numeros}`);
+console.log(`splice para insertar c/ pos negativa ${numeros}`);
 numeros.splice(-1,0,'atraz','oh','zzzz');
-console.log(`splice para insertar ${numeros}`);
-numeros.splice(1,2,-100,0.5);
 console.log(`splice eliminar insertar ${numeros}`);
+let pos = numeros.indexOf('atraz');
+// ref posicion desde donde, cantidad a eliminar, elementos a insertar ...
+numeros.splice(pos,3,0,null,null);
+console.log(numeros);
 
 
 
