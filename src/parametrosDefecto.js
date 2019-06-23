@@ -1,5 +1,9 @@
 // defino parametros por default en funcion
-function registrarUsuario(nombre,pais = '<ARG>',correo = '<sin correo>') {
+// function registrarUsuario(nombre,pais = '<ARG>',correo = '<sin correo>') {
+//     return `nombre = ${nombre} pais = ${pais} correo = ${correo}` ;
+// }
+
+registrarUsuario(nombre,pais = '<ARG>',correo = '<sin correo>') {
     return `nombre = ${nombre} pais = ${pais} correo = ${correo}` ;
 }
 
