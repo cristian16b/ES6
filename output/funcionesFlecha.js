@@ -1,25 +1,21 @@
-const nombres = ['peron','eva','nestor'];
+"use strict";
 
-// const numero_caracteres = nombres.map(
+var nombres = ['peron', 'eva', 'nestor']; // const numero_caracteres = nombres.map(
 //     function(nombre) {
 //         let salida = `${nombre} cantidad chars ${nombre.length}`
 //         console.log(salida);
 //     }
 // );
-
 //
 // (parametro) => {
 //     // codigo 
 //     // return
 // }
-
 // const numero_caracteres = nombres.map((nombre) => {
 //     let salida = `${nombre} cantidad chars ${nombre.length}`
 //     console.log(salida);
 // });
-
 // const numero_caracteres = nombres.map((nombre) => { return `${nombre} cantidad chars ${nombre.length}`});
-
 // const numero_caracteres = nombres.map((nombre) => `${nombre} cantidad chars ${nombre.length}` );
 
 /*
@@ -27,35 +23,33 @@ const nombres = ['peron','eva','nestor'];
 * indicada aplicados a cada uno de sus elementos.
 */
 
-const numero_caracteres = nombres.map(nombre => {
-   return `${nombre} cantidad chars ${nombre.length}` 
+var numero_caracteres = nombres.map(function (nombre) {
+  return "".concat(nombre, " cantidad chars ").concat(nombre.length);
 });
 
-const numero_mayor = (x,y) => {
-    let salida = `${x}>${y}`;
-    if (y>x) {
-        salida = `${y}>${x}`
-    }
-    return salida;
-}
+var numero_mayor = function numero_mayor(x, y) {
+  var salida = "".concat(x, ">").concat(y);
 
-// console.log(numero_caracteres);
+  if (y > x) {
+    salida = "".concat(y, ">").concat(x);
+  }
 
+  return salida;
+}; // console.log(numero_caracteres);
 // let a = 20,b = 30,c = 10;
 // console.log(numero_mayor(a,b));
 // console.log(numero_mayor(c,a));
 
-const numeros = [2,3,5,6];
+
+var numeros = [2, 3, 5, 6];
 
 function duplicarVector(x) {
-    const duplicar = x.map(numero => {
-        return numero * 2
-    });
-    // console.log(duplicar);
-    return duplicar;
-}
+  var duplicar = x.map(function (numero) {
+    return numero * 2;
+  }); // console.log(duplicar);
 
-// console.log(numeros);
+  return duplicar;
+} // console.log(numeros);
 // console.log(duplicarVector(numeros));
 // IMPORTANTE FOREACH SOLO RECORRE NO DEVUELVE UN ARRAY COMO LO HACE MAP
 // function duplicarVector2(x) {
@@ -69,12 +63,27 @@ function duplicarVector(x) {
 //TENER EN CUENTA LOS SIGUIENTE
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array
 
-numeros.forEach((numero,indice,array) => {
-    console.log(numero,indice,array);
-});
 
+numeros.forEach(function (numero, indice, array) {
+  console.log(numero, indice, array);
+}); //REPASAR FUNCIONES DE ARRAYS CON LA ES6, PORQUE ES MUY NECESARIO AGARRARLE LA MANO
 
-//REPASAR FUNCIONES DE ARRAYS CON LA ES6, PORQUE ES MUY NECESARIO AGARRARLE LA MANO
+numeros.push(21);
+console.log("push ".concat(numeros));
+numeros.pop();
+console.log("pop ".concat(numeros));
+numeros.shift();
+console.log("shift elimino al inicio ".concat(numeros));
+numeros.unshift([-1, 0]);
+console.log("unshift inserto inicio ".concat(numeros));
+console.log("posicion del 5 es ".concat(numeros.indexOf(5)));
+console.log("pop ".concat(numeros.indexOf(-2))); //retorna -1 porque no existe
 
-
-
+numeros.splice(0, 1);
+console.log("splice para eliminar ".concat(numeros));
+numeros.splice(1, 0, 'a', 'b', 'c');
+console.log("splice para insertar ".concat(numeros));
+numeros.splice(-1, 0, 'atraz', 'oh', 'zzzz');
+console.log("splice para insertar ".concat(numeros));
+numeros.splice(1, 2, -100, 0.5);
+console.log("splice eliminar insertar ".concat(numeros));
