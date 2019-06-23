@@ -9,3 +9,8 @@ function registrarUsuario(nombre) {
 
 console.log(registrarUsuario('oso', 'polonia'));
 console.log(registrarUsuario('oso'));
+console.log(registrarUsuario('oso', '')); //no usar
+
+console.log(registrarUsuario('oso', null)); //no usar
+
+console.log(registrarUsuario('oso', undefined)); //equivalente a no declararlo
