@@ -11,8 +11,11 @@
 //     let nombre = 'dardo';
 //     return 'hola' + nombre;
 // }
-// console.log(saludo());
-// ambito de variable de tipo bloque con let 
+var saludo = function saludo(nombre) {
+  return console.log('hola' + nombre);
+};
+
+console.log(saludo('dardo')); // ambito de variable de tipo bloque con let 
 // let edad = 19;
 // if(edad>=18) {
 //     let esmayor = true;
@@ -25,6 +28,7 @@
 // // nombre='a';
 // console.log('nombre = ' + nombre);
 // const con arrays
+
 var colores = ['rojo', 'verde'];
 colores.push('azul');
 console.log(colores);

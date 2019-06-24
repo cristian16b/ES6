@@ -13,7 +13,9 @@
 //     return 'hola' + nombre;
 // }
 
-// console.log(saludo());
+const saludo = (nombre) =>  console.log('hola' + nombre);
+
+console.log(saludo('dardo'));
 
 // ambito de variable de tipo bloque con let 
 

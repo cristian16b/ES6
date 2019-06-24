@@ -3,7 +3,7 @@
 //     return `nombre = ${nombre} pais = ${pais} correo = ${correo}` ;
 // }
 
-registrarUsuario(nombre,pais = '<ARG>',correo = '<sin correo>') {
+const registrarUsuario = (nombre,pais = '<ARG>',correo = '<sin correo>') => {
     return `nombre = ${nombre} pais = ${pais} correo = ${correo}` ;
 }
 
