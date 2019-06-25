@@ -28,3 +28,7 @@ lista.push(crearObjeto('oso',29));
 lista.push(crearObjeto('noel',29));
 lista.push(crearObjeto('noosos',29));
 console.log(lista);
+
+for(let elemento in lista) {
+    console.log(lista[elemento].toString());
+}
