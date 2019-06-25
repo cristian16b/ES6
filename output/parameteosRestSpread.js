@@ -21,3 +21,20 @@ var mostrarDatosSpreach = function mostrarDatosSpreach() {
 
 var arreglodatos = ['oso', 'casa', 'feliz'];
 mostrarDatosSpreach.apply(void 0, arreglodatos);
+var numeros = [10, 20, 30]; // con rest
+
+var sumar = function sumar() {
+  var suma = 0;
+
+  for (var _len3 = arguments.length, lista = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+    lista[_key3] = arguments[_key3];
+  }
+
+  for (var k in lista) {
+    suma = suma + lista[k];
+  }
+
+  console.log("la suma es ".concat(suma));
+};
+
+sumar(20, 30, 50, 60); // con spreach
