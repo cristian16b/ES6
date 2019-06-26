@@ -13,7 +13,7 @@ const mostrarDatosSpreach = (...datos) => {
 const arreglodatos = ['oso','casa','feliz'];
 mostrarDatosSpreach(...arreglodatos);
 
-const numeros = [10,20,30];
+const numeros = [10,20,30,20];
 // con rest
 const sumar = (...lista) => {
     let suma = 0;
@@ -24,4 +24,15 @@ const sumar = (...lista) => {
 }
 sumar(20,30,50,60);
 
-// con spreach
+// con spreach se le pasa un vector 
+// y lo pone como un vector
+const sumarSpreach = (...datos) => {
+    // convierte 
+    console.log(datos);
+    let suma = 0;
+    for (let m in datos) {
+        suma = suma + datos[m];
+    }
+    console.log(suma);
+}
+sumarSpreach(...numeros);
