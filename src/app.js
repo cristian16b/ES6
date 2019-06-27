@@ -8,8 +8,12 @@ import {ObtenerSuma} from './modulos/calculosMatematicos'
 // const cristian = new Persona('cristian');
 // console.log(cristian.toString());
 
+//************************************************************************** */*/
+// declaracion de eventos segun la w3c
 window.addEventListener('load',inicio,false);
 
 function inicio() {
     document.getElementById('sumar').addEventListener("click",ObtenerSuma,false);
 }
+
+//************************************************************************** */*/
