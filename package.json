@@ -9,6 +9,6 @@
   },
   "scripts": {
     "build-babel": "babel src -d output --watch ",
-    "build": "webpack"
+    "build": "webpack --watch"
   }
 }
