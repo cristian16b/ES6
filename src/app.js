@@ -2,6 +2,7 @@
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';
 import {ObtenerSuma} from './modulos/calculosMatematicos';
+import {objeto,arrayobjetos} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
 
 // mensajeAlerta('Hola CRISTIAN');
@@ -46,3 +47,9 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // console.log(dias[fecha.getDay()]);
 // console.log(fecha.getMonth()+1);
 // console.log(fecha.getFullYear());
+
+// console.log(objeto.subobjeto);
+// console.log(arrayobjetos);
+// for(let u of arrayobjetos) {
+//     console.log(u.nombre);
+// }
