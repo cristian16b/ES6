@@ -2,7 +2,7 @@
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';
 import {ObtenerSuma} from './modulos/calculosMatematicos';
-import {fecha} from './modulos/fechasHoras';
+// import {fecha} from './modulos/fechasHoras';
 
 // mensajeAlerta('Hola CRISTIAN');
 
@@ -39,10 +39,10 @@ const mostrar2 = () => {
 // let intervalo = setInterval(mostrar2,6000);
 ///
 const dias = ['dom','lun','mar','mie','jue','vie','sab'];
-console.log(fecha);
-console.log(fecha.getHours()-12);
-console.log(fecha.getMinutes());
-console.log(fecha.getSeconds());
-console.log(dias[fecha.getDay()]);
-console.log(fecha.getMonth()+1);
-console.log(fecha.getFullYear());
+// console.log(fecha);
+// console.log(fecha.getHours()-12);
+// console.log(fecha.getMinutes());
+// console.log(fecha.getSeconds());
+// console.log(dias[fecha.getDay()]);
+// console.log(fecha.getMonth()+1);
+// console.log(fecha.getFullYear());
