@@ -17,3 +17,22 @@ function inicio() {
 }
 
 //************************************************************************** */*/
+// uso de los timers de js
+let contador = 0;
+
+const mostrar1 = () => {
+    console.log(`ejecuto timeout`);
+}
+
+const mostrar2 = () => {
+    console.log(`ejecuto interval`);
+    contador++;
+    if(contador > 5) {
+        clearInterval(intervalo);
+        console.log('clear');
+        contador = 0;
+    }
+}
+
+setTimeout(mostrar1,3000);
+let intervalo = setInterval(mostrar2,6000);

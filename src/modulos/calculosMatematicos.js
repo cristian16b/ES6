@@ -11,8 +11,6 @@ const ObtenerSuma = () => {
 
     // console.log(resultado);
     // document.getElementById('resultado').value = resultado;
-
-    formulario.resultado.value = resultado;
 }
 
 export {ObtenerSuma};
