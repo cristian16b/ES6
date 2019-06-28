@@ -9,5 +9,18 @@ let objeto = {
 
 let arrayobjetos = [objeto,objeto,objeto];
 
-export {objeto,arrayobjetos};
+const obtenerDatos = () => {
+    fetch('https://randomuser.me/api/')
+        .then(respuesta => {
+            console.log(respuesta);
+        })
+}
+
+
+
+
+
+
+
+export {obtenerDatos};
 
