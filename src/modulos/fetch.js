@@ -41,7 +41,7 @@ const actualizarTabla = () => {
 
 const cargarFilas = (datos) => {
     for(let elemento in datos) {
-        console.log(elemento);
+//        console.log(elemento);
         tabla.innerHTML += `
             <tr>
                 <td>${datos[elemento].userId}</td>
