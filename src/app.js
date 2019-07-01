@@ -2,7 +2,7 @@
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';
 import {ObtenerSuma} from './modulos/calculosMatematicos';
-import {obtenerDatos,actualizarTabla} from './modulos/fetch';
+import {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
 
 // mensajeAlerta('Hola CRISTIAN');
@@ -51,3 +51,7 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // console.log(fecha.getFullYear());
 
 //obtenerDatos();
+// agregarRecurso();
+// actualizarRecurso();
+// eliminarRecurso();
+// filtrarRecurso();
