@@ -8,3 +8,10 @@ Referencia de [arreglos](https://developer.mozilla.org/es/docs/Web/JavaScript/Re
 Referencia [js](https://www.tutorialesprogramacionya.com/javascriptya/index.php?inicio=90)
 
 Curso [fetch js](https://www.youtube.com/watch?v=8ibcDy02FAw&list=PLPl81lqbj-4JXPTIPbIvWED-xTVmOzhrf) 
+
+---------------------------
+Para instalar **babel** npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+Para instalar **webpack** npm install --save-dev webpack
+
+Para usar **babel** con **webpack** npm install --save-dev babel-loader @babel/core

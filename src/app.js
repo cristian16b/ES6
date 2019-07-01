@@ -2,7 +2,7 @@
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';
 import {ObtenerSuma} from './modulos/calculosMatematicos';
-import {obtenerDatos} from './modulos/fetch';
+import {obtenerDatos,actualizarTabla} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
 
 // mensajeAlerta('Hola CRISTIAN');
@@ -16,6 +16,8 @@ window.addEventListener('load',inicio,false);
 
 function inicio() {
     document.getElementById('sumar').addEventListener("click",ObtenerSuma,false);
+    // document.getElementById('actualizar').addEventListener("click",obtenerDatos,false);
+    document.getElementById('actualizar').addEventListener("click",actualizarTabla,false);
 }
 
 //************************************************************************** */*/
@@ -48,4 +50,4 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // console.log(fecha.getMonth()+1);
 // console.log(fecha.getFullYear());
 
-obtenerDatos();
+//obtenerDatos();
