@@ -4,7 +4,6 @@
 import {ObtenerSuma} from './modulos/calculosMatematicos';
 import {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
-import {scrollInfinito} from './modulos/scrollInifinito';
 
 // mensajeAlerta('Hola CRISTIAN');
 
@@ -20,6 +19,20 @@ function inicio() {
     document.getElementById('sumar').addEventListener("click",ObtenerSuma,false);
     // document.getElementById('actualizar').addEventListener("click",obtenerDatos,false);
     document.getElementById('actualizar').addEventListener("click",actualizarTabla,false);
+}
+
+const scrollInfinito = () => {
+    
+    // console.log('scrolling');
+    // console.log(document.body.scrollHeight - window.innerHeight - 100);
+    // console.log(window.scrollY);
+    let tamanioViewport = document.body.scrollHeight - window.innerHeight;
+    if ( window.scrollY > tamanioViewport ) {
+        // hacer fetch
+        // console.log('estoy en el final del scroll'); 
+        // alert('estoy al final del scroll');
+        actualizarTabla();
+    }
 }
 
 //************************************************************************** */*/
