@@ -25,7 +25,7 @@ const obtenerDatos = () => {
      //   .catch(console.log('error'))
 }
 
-let tabla = document.getElementById("tabla");
+let tabla = document.getElementById("tablaBody");
 
 const actualizarTabla = () => {
     // subir tabla a un fakejsonserver porque desde local lo rebota por no ser http
@@ -40,17 +40,37 @@ const actualizarTabla = () => {
 }
 
 const cargarFilas = (datos) => {
-    for(let elemento in datos) {
-//        console.log(elemento);
-        tabla.innerHTML += `
-            <tr>
-                <td>${datos[elemento].userId}</td>
-                <td>${datos[elemento].id}</td>
-                <td>${datos[elemento].title}</td>
-                <td>${datos[elemento].completed}</td>
-            </tr>
-        `;
-    }
+//     for(let elemento in datos) {
+// //        console.log(elemento);
+//         tabla.innerHTML += `
+//             <tr>
+//                 <td>${datos[elemento].userId}</td>
+//                 <td>${datos[elemento].id}</td>
+//                 <td>${datos[elemento].title}</td>
+//                 <td>${datos[elemento].completed}</td>
+//             </tr>
+//         `;
+//     }
+
+    // obtengo las filas, reemplazo el for por un map
+    let filas = datos.map((elemento)=>{
+        return `
+                <tr>
+                    <td>${elemento.userId}</td>
+                    <td>${elemento.id}</td>
+                    <td>${elemento.title}</td>
+                    <td>${elemento.completed}</td>
+                </tr>
+            `;
+    });
+
+    // inserto en el tbody
+    tabla.innerHTML += filas;
+
+    // let map = datos.map((elemento)=>{
+    //     return elemento.title;
+    // });
+    // console.log(map);
 }
 
 const agregarRecurso = () => {
