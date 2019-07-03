@@ -4,7 +4,7 @@
 import {ObtenerSuma} from './modulos/calculosMatematicos';
 import {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
-
+import {platoPrincipal} from './modulos/mapFiltersReduce';
 // mensajeAlerta('Hola CRISTIAN');
 
 // const cristian = new Persona('cristian');
@@ -70,3 +70,5 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // actualizarRecurso();
 // eliminarRecurso();
 // filtrarRecurso();
+
+console.log(platoPrincipal);
