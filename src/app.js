@@ -2,7 +2,7 @@
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';
 import {ObtenerSuma} from './modulos/calculosMatematicos';
-import {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso} from './modulos/fetch';
+import {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso, usarReduce} from './modulos/fetch';
 // import {fecha} from './modulos/fechasHoras';
 import {platoPrincipal} from './modulos/mapFiltersReduce';
 // mensajeAlerta('Hola CRISTIAN');
@@ -72,3 +72,4 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // filtrarRecurso();
 
 console.log(platoPrincipal);
+// console.log(usarReduce);
