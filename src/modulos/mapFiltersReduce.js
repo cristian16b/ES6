@@ -18,11 +18,26 @@ platoPrincipal = almuerzos.filter((almuerzo)=>{
     return almuerzo.postre;
 });
 
-//uso de reduce 
-platoPrincipal = almuerzos.reduce((acumulador,almuerzo) => {
-    return acumulador.concat(almuerzo.postre);
+// //uso de reduce 
+// platoPrincipal = almuerzos.reduce((acumulador,almuerzo) => {
+//     return acumulador.concat(almuerzo.postre);
+// },[]);
+
+let plato = almuerzos.reduce((anterior,actual,index,arreglo)=>{
+    return anterior.concat(actual.principal);
 },[]);
 
+plato = almuerzos.reduce((anterior,actual,index,arreglo)=>{
+    console.log(actual.postre);
+    console.log(index);
+    console.log(arreglo);
+    console.log(actual.postre === 'helado');
+    if(actual.postre === 'helado') {
+        alert(anterior);
+        return anterior + 1;
+    }
+    return anterior + 0;
+},0);
 
-export {platoPrincipal};
+export {platoPrincipal,plato};
 

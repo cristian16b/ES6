@@ -121,4 +121,3 @@ const filtrarRecurso = () => {
 }
 
 export {obtenerDatos,actualizarTabla,agregarRecurso,actualizarRecurso,eliminarRecurso,filtrarRecurso};
-
