@@ -53,10 +53,21 @@ const cargarFilas = (datos) => {
 //     }
 
     // obtengo las filas, reemplazo el for por un map
-    let filas = datos.filter((fila)=>{
-        return fila.completed === false;
-    }).map((elemento)=>{
-        return `
+    // let filas = datos.filter((fila)=>{
+    //    return fila.completed === false;
+    // }).map((elemento)=>{
+    //     return `
+    //             <tr>
+    //                 <td>${elemento.userId}</td>
+    //                 <td>${elemento.id}</td>
+    //                 <td>${elemento.title}</td>
+    //                 <td>${elemento.completed}</td>
+    //             </tr>
+    //         `;
+    // });
+
+    let filas = datos.map((elemento)=>{
+            return `
                 <tr>
                     <td>${elemento.userId}</td>
                     <td>${elemento.id}</td>
