@@ -1,4 +1,3 @@
-"use strict";
 let objeto = {
     nombre: 'html',
     code: 10,
@@ -28,27 +27,18 @@ const obtenerDatos = () => {
 
 let tabla = document.getElementById("tablaBody");
 
-(async () => {
-    try {
-    //   const posts = await requestGet('https://jsonplaceholder.typicode.com/posts');
-    //   const firstPostUser = posts[0]['userId'];
-      // console.log(firstPostUser);
-    //   const user = await requestGet(`https://jsonplaceholder.typicode.com/users/${firstPostUser}`);
-    //   console.log(`User: ${user.name}`);
-    } catch (err) {
-      console.log(err);
-    }
-  })();
-
-async function actualizarTabla () { 
-    console.log('ffooos');
+const actualizarTabla = async () => { 
 //     // subir tabla a un fakejsonserver porque desde local lo rebota por no ser http
     // fetch('tabla.json')
     // cambiado a una api de la siguiente web https://jsonplaceholder.typicode.com/
     const url = 'https://jsonplaceholder.typicode.com/todos';
-    const respuesta =  await fetch(url);
-    const json = await respuesta.json();
-    cargarFilas(json);
+    try {    
+        const respuesta =  await fetch(url);
+        const json = await respuesta.json();
+        cargarFilas(json);
+    } catch(e) {
+        console.log(`${e}`);
+    }
 }
 
 const cargarFilas = (datos) => {
