@@ -36,7 +36,7 @@ const actualizarTabla = () => {
     .then(data => {
         cargarFilas(data);
     })
-   .catch(console.log('error'))
+//    .catch(console.log('error'))
 }
 
 const cargarFilas = (datos) => {
@@ -53,37 +53,28 @@ const cargarFilas = (datos) => {
 //     }
 
     // obtengo las filas, reemplazo el for por un map
-    // let filas = datos.filter((fila)=>{
-    //    return fila.completed === false;
-    // }).map((elemento)=>{
-    //     return `
-    //             <tr>
-    //                 <td>${elemento.userId}</td>
-    //                 <td>${elemento.id}</td>
-    //                 <td>${elemento.title}</td>
-    //                 <td>${elemento.completed}</td>
-    //             </tr>
-    //         `;
-    // });
-
-    let filas = datos.map((elemento)=>{
-            return `<tr>
-                        <td>${elemento.userId}</td>
-                        <td>${elemento.id}</td>
-                        <td>${elemento.title}</td>
-                        <td>${elemento.completed}</td>
-                    </tr>`;
+    let filas = datos.filter((fila)=>{
+       return fila.completed === false && fila.userId === 1;
+    }).map((elemento)=>{
+        // return `
+        tabla.innerHTML += 
+                `<tr>
+                    <td>${elemento.userId}</td>
+                    <td>${elemento.id}</td>
+                    <td>${elemento.title}</td>
+                    <td>${elemento.completed}</td>
+                </tr>
+            `;
     });
 
-    console.log(tabla.innerHTML);
-
-    // inserto en el tbody
-    tabla.innerHTML += filas;
-
-    // let map = datos.map((elemento)=>{
-    //     return elemento.title;
+    // let filas = datos.map((elemento)=>{
+    //         tabla.innerHTML += `<tr>
+    //                     <td>${elemento.userId}</td>
+    //                     <td>${elemento.id}</td>
+    //                     <td>${elemento.title}</td>
+    //                     <td>${elemento.completed}</td>
+    //                 </tr>`;
     // });
-    // console.log(map);
 }
 
 const agregarRecurso = () => {
