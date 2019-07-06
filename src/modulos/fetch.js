@@ -31,11 +31,11 @@ const actualizarTabla = () => {
     // subir tabla a un fakejsonserver porque desde local lo rebota por no ser http
     // fetch('tabla.json')
     // cambiado a una api de la siguiente web https://jsonplaceholder.typicode.com/
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(respuesta => respuesta.json())
-    .then(data => {
-        cargarFilas(data);
-    })
+    // fetch('https://jsonplaceholder.typicode.com/todos')
+    // .then(respuesta => respuesta.json())
+    // .then(data => {
+    //     cargarFilas(data);
+    // })
  //   .catch(console.log('error'))
 }
 
