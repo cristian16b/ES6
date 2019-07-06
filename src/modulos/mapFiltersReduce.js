@@ -28,10 +28,10 @@ let plato = almuerzos.reduce((anterior,actual,index,arreglo)=>{
 },[]);
 
 plato = almuerzos.reduce((anterior,actual,index,arreglo)=>{
-    console.log(actual.postre);
-    console.log(index);
-    console.log(arreglo);
-    console.log(actual.postre === 'helado');
+    // console.log(actual.postre);
+    // console.log(index);
+    // console.log(arreglo);
+    // console.log(actual.postre === 'helado');
     if(actual.postre === 'helado') {
         return anterior + 1;
     }
