@@ -33,7 +33,6 @@ plato = almuerzos.reduce((anterior,actual,index,arreglo)=>{
     console.log(arreglo);
     console.log(actual.postre === 'helado');
     if(actual.postre === 'helado') {
-        alert(anterior);
         return anterior + 1;
     }
     return anterior + 0;
