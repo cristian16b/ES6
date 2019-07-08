@@ -56,18 +56,11 @@ const cargarFilas = (datos) => {
 
     // obtengo las filas, reemplazo el for por un map
     let filas = datos.filter((fila)=>{
-<<<<<<< HEAD
-       return fila.completed === false;
-    }).map((elemento)=>{
-        return `
-                <tr>
-=======
        return fila.completed === false && fila.userId === 1;
     }).map((elemento)=>{
         // return `
         tabla.innerHTML += 
                 `<tr>
->>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
                     <td>${elemento.userId}</td>
                     <td>${elemento.id}</td>
                     <td>${elemento.title}</td>
@@ -77,28 +70,12 @@ const cargarFilas = (datos) => {
     });
 
     // let filas = datos.map((elemento)=>{
-<<<<<<< HEAD
-    //         return `<tr>
-=======
     //         tabla.innerHTML += `<tr>
->>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
     //                     <td>${elemento.userId}</td>
     //                     <td>${elemento.id}</td>
     //                     <td>${elemento.title}</td>
     //                     <td>${elemento.completed}</td>
     //                 </tr>`;
-<<<<<<< HEAD
-    // });
-
-    console.log(tabla.innerHTML);
-
-    // inserto en el tbody
-    tabla.innerHTML += filas;
-
-    // let map = datos.map((elemento)=>{
-    //     return elemento.title;
-=======
->>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
     // });
 }
 
