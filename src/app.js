@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 // import {mensajeAlerta} from './modulos/mensajeAlerta';
 // import {Persona} from './modulos/ClasePersona';
 // import {eventos, inicio} from './modulos/eventos';

@@ -15,3 +15,7 @@ Para instalar **babel** npm install --save-dev @babel/core @babel/cli @babel/pre
 Para instalar **webpack** npm install --save-dev webpack
 
 Para usar **babel** con **webpack** npm install --save-dev babel-loader @babel/core
+
+Para installar **babel con polyfill** npm i babel-polyfill
+
+Para instalar **babel con runtime y poder usar async-await** npm install --save @babel/runtime

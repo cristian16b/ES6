@@ -27,16 +27,18 @@ const obtenerDatos = () => {
 
 let tabla = document.getElementById("tablaBody");
 
-const actualizarTabla = () => {
-    // subir tabla a un fakejsonserver porque desde local lo rebota por no ser http
+const actualizarTabla = async () => { 
+//     // subir tabla a un fakejsonserver porque desde local lo rebota por no ser http
     // fetch('tabla.json')
     // cambiado a una api de la siguiente web https://jsonplaceholder.typicode.com/
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(respuesta => respuesta.json())
-    .then(data => {
-        cargarFilas(data);
-    })
-   .catch(console.log('error'))
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    try {    
+        const respuesta =  await fetch(url);
+        const json = await respuesta.json();
+        cargarFilas(json);
+    } catch(e) {
+        console.log(`${e}`);
+    }
 }
 
 const cargarFilas = (datos) => {
@@ -54,10 +56,18 @@ const cargarFilas = (datos) => {
 
     // obtengo las filas, reemplazo el for por un map
     let filas = datos.filter((fila)=>{
+<<<<<<< HEAD
        return fila.completed === false;
     }).map((elemento)=>{
         return `
                 <tr>
+=======
+       return fila.completed === false && fila.userId === 1;
+    }).map((elemento)=>{
+        // return `
+        tabla.innerHTML += 
+                `<tr>
+>>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
                     <td>${elemento.userId}</td>
                     <td>${elemento.id}</td>
                     <td>${elemento.title}</td>
@@ -67,12 +77,17 @@ const cargarFilas = (datos) => {
     });
 
     // let filas = datos.map((elemento)=>{
+<<<<<<< HEAD
     //         return `<tr>
+=======
+    //         tabla.innerHTML += `<tr>
+>>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
     //                     <td>${elemento.userId}</td>
     //                     <td>${elemento.id}</td>
     //                     <td>${elemento.title}</td>
     //                     <td>${elemento.completed}</td>
     //                 </tr>`;
+<<<<<<< HEAD
     // });
 
     console.log(tabla.innerHTML);
@@ -82,8 +97,9 @@ const cargarFilas = (datos) => {
 
     // let map = datos.map((elemento)=>{
     //     return elemento.title;
+=======
+>>>>>>> 8842c324bbc8a8176e21c4306d08b6b195dde5b1
     // });
-    // console.log(map);
 }
 
 const agregarRecurso = () => {
