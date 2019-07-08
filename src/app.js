@@ -73,4 +73,4 @@ const dias = ['dom','lun','mar','mie','jue','vie','sab'];
 // filtrarRecurso();
 
 // console.log(platoPrincipal);
-console.log(plato);
+// console.log(plato);
