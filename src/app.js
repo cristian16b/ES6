@@ -23,13 +23,23 @@ function inicio() {
 
     // agrego un evento dinamico para que cuando se clickea una celda (td) del tbody se pinte de rojo
     document.getElementById('tablaBody').addEventListener('click',(e) => {
-        console.log(e.target);
-        // let target = e.target;
-        if(e.target.nodeName == 'TD') {
-            // console.log('entro');
-            e.target.style.backgroundColor = 'red';
-            // console.log('pasa');
+        // console.log(e.target.parent);
+        let nodoPadre = e.target.parentNode;
+        let puntero = nodoPadre.firstChild;
+
+        while(puntero != null) {
+            if(puntero.nodeType==Node.ELEMENT_NODE) {
+                console.log(puntero.nodeName);
+                puntero.style.backgroundColor = 'red';
+            }
+            puntero = puntero.nextSibling;
         }
+
+        // if(e.target.nodeName == 'TD') {
+        //     // console.log('entro');
+        //     e.target.style.backgroundColor = 'red';
+        //     // console.log('pasa');
+        // }
     });
 }
 
