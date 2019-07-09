@@ -23,7 +23,7 @@ function inicio() {
 
     // agrego un evento dinamico para que cuando se clickea una celda (td) del tbody se pinte de rojo
     document.getElementById('tablaBody').addEventListener('click',(e) => {
-        // console.log(e.target.nodeName);
+        console.log(e.target);
         // let target = e.target;
         if(e.target.nodeName == 'TD') {
             // console.log('entro');
