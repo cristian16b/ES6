@@ -20,6 +20,17 @@ function inicio() {
     document.getElementById('sumar').addEventListener("click",ObtenerSuma,false);
     // document.getElementById('actualizar').addEventListener("click",obtenerDatos,false);
     document.getElementById('actualizar').addEventListener("click",actualizarTabla,false);
+
+    // agrego un evento dinamico para que cuando se clickea una celda (td) del tbody se pinte de rojo
+    document.getElementById('tablaBody').addEventListener('click',(e) => {
+        // console.log(e.target.nodeName);
+        // let target = e.target;
+        if(e.target.nodeName == 'TD') {
+            // console.log('entro');
+            e.target.style.backgroundColor = 'red';
+            // console.log('pasa');
+        }
+    });
 }
 
 const scrollInfinito = () => {
